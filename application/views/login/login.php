@@ -38,12 +38,17 @@
 </head>
 <body>
  <div class="container">
+
 	  <form action="<?= base_url('login/login_action') ?>" method="post" class="login">
-			  <h3 class="login_title">Login</h3>
-			  <input type="hidden" class="form-control" name="fullname" value="" placeholder="Enter Your Username" required/><br>
+		  <?php if ($this->session->flashdata('user_success')) { ?>
+			  <div class="alert alert-danger" style="width: 102%!important;"> <?= $this->session->flashdata('user_success') ?> </div>
+		  <?php } ?>
+		  <h3 class="login_title">Login</h3>
 			  <input type="text" class="form-control" name="username" value="" placeholder="Enter Your Username" required/><br>
-			  <input type="password" class="form-control" name="password" value="" placeholder="Enter Your Password" required/><br>
-			  <button type="submit" class="btn btn-success" name="submit" value="submit">Login</button>
+		      <?php echo form_error('username', '<span style="color: red" class="form_error">', '</span>'); ?>
+		      <input type="password" class="form-control" name="password" value="" placeholder="Enter Your Password" required/><br>
+		      <?php echo form_error('password', '<span style="color: red" class="form_error">', '</span>'); ?>
+		      <button type="submit" class="btn btn-success" name="submit" value="submit">Login</button>
 
 	  </form>
   </div>

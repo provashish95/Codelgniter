@@ -118,6 +118,27 @@
 <!--</div>-->
 
 
+<table class="table-striped">
+	<tr>
+		<th>user name:</th>
+		<th>full name:</th>
+		<th>email:</th>
+		<th>password:</th>
+	</tr>
+	<?php if ($data->num_rows()>0){?>
+	<?php foreach ($data->result() as $row){ ?>
+	<tr>
+		<td><?php echo $row->username ;?></td>
+		<td><?php echo $row->fullname ;?></td>
+		<td><?php echo $row->email ;?></td>
+		<td><?php echo $row->password ;?></td>
+	</tr>
+	<?php }?>
+	<?php }else{?>
+	<h1>No data found</h1>
+	<?php }?>
+</table>
+
 <div class="jumbotron">
   <h1 class="display-4">Hello, world!</h1>
   <p class="lead">This is a simple hero unit, a simple jumbotron-style component fhis is a simple hero unit, a simple jumbotron-style component fhis is a simple hero unit, a simple jumbotron-style component fhis is a sihis is a simple hero unit, a simple jumbotron-style component fmple hero unit, a simple jumbotron-style component fhis is a simple hero unit, a simple jumbotron-style chis is a simple hero unit, a simple jumbotron-style component fomponent for calling extra attention to featured content or information.</p>
