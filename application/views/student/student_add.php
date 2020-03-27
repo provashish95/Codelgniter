@@ -23,7 +23,7 @@
 </head>
 <body>
 <header>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg" style="background-color: #d8d3d3;">
 		<a class="nav-link" href="">Home</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -44,18 +44,79 @@
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Dropdown
+						<?php echo  $this->session->userdata('full_name') ;?>
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<a class="dropdown-item" href="#">Something else here</a>
+						<a class="dropdown-item" href="#">Profile</a>
+						<a class="dropdown-item" href="<?= base_url('login/logout')?>">Log Out</a>
 					</div>
 				</li>
 			</ul>
 		</div>
 	</nav>
 </header>
+
+<!--<div class="row">-->
+<!--	<div class="col-sm-6">-->
+<!--		<div class="card">-->
+<!--			<div class="card-body">-->
+<!--				<h5 class="card-title">Special title treatment</h5>-->
+<!--				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--				<a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<div class="col-sm-6">-->
+<!--		<div class="card">-->
+<!--			<div class="card-body">-->
+<!--				<h5 class="card-title">Special title treatment</h5>-->
+<!--				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--				<a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--	<div class="col-sm-6">-->
+<!--		<div class="card">-->
+<!--			<div class="card-body">-->
+<!--				<h5 class="card-title">Special title treatment</h5>-->
+<!--				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--				<a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<div class="col-sm-6">-->
+<!--		<div class="card">-->
+<!--			<div class="card-body">-->
+<!--				<h5 class="card-title">Special title treatment</h5>-->
+<!--				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--				<a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--	<div class="col-sm-6">-->
+<!--		<div class="card">-->
+<!--			<div class="card-body">-->
+<!--				<h5 class="card-title">Special title treatment</h5>-->
+<!--				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--				<a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<div class="col-sm-6">-->
+<!--		<div class="card">-->
+<!--			<div class="card-body">-->
+<!--				<h5 class="card-title">Special title treatment</h5>-->
+<!--				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--				<a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+
 
 <div class="jumbotron">
   <h1 class="display-4">Hello, world!</h1>

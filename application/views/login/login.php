@@ -1,10 +1,10 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Expect-UA-compatible" content="ie=edge">
-	<title>Student Add</title>
+	<title>Login</title>
 	<!--Bootstrap link -->
 	<link href="<?= base_url(); ?>assets/bootstrap/bootstrap.min.css" rel="stylesheet">
 	<!--Bootstrap link -->
@@ -38,14 +38,13 @@
 </head>
 <body>
  <div class="container">
-	  <form action="<?= base_url('admin/login/login_action')?>" method="post" class="login">
-<!--		  <div class="one">-->
+	  <form action="<?= base_url('login/login_action') ?>" method="post" class="login">
 			  <h3 class="login_title">Login</h3>
+			  <input type="hidden" class="form-control" name="fullname" value="" placeholder="Enter Your Username" required/><br>
 			  <input type="text" class="form-control" name="username" value="" placeholder="Enter Your Username" required/><br>
 			  <input type="password" class="form-control" name="password" value="" placeholder="Enter Your Password" required/><br>
 			  <button type="submit" class="btn btn-success" name="submit" value="submit">Login</button>
- 
-<!--		  </div>-->
+
 	  </form>
   </div>
 
