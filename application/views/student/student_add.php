@@ -47,8 +47,8 @@
 						<?php echo  $this->session->userdata('full_name') ;?>
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Profile</a>
-						<a class="dropdown-item" href="<?= base_url('login/logout')?>">Log Out</a>
+						<a class="dropdown-item" href="<?= base_url('login/user_profile')?>">Profile</a>
+						<a class="dropdown-item" href="<?= base_url('login/user_logout')?>">Log Out</a>
 					</div>
 				</li>
 			</ul>
@@ -56,6 +56,7 @@
 	</nav>
 </header>
 
+
 <!--<div class="row">-->
 <!--	<div class="col-sm-6">-->
 <!--		<div class="card">-->
@@ -116,29 +117,6 @@
 <!--		</div>-->
 <!--	</div>-->
 <!--</div>-->
-
-
-<table class="table-striped">
-	<tr>
-		<th>user name:</th>
-		<th>full name:</th>
-		<th>email:</th>
-		<th>password:</th>
-	</tr>
-	<?php if ($data->num_rows()>0){?>
-	<?php foreach ($data->result() as $row){ ?>
-	<tr>
-		<td><?php echo $row->username ;?></td>
-		<td><?php echo $row->fullname ;?></td>
-		<td><?php echo $row->email ;?></td>
-		<td><?php echo $row->password ;?></td>
-	</tr>
-	<?php }?>
-	<?php }else{?>
-	<h1>No data found</h1>
-	<?php }?>
-</table>
-
 <div class="jumbotron">
   <h1 class="display-4">Hello, world!</h1>
   <p class="lead">This is a simple hero unit, a simple jumbotron-style component fhis is a simple hero unit, a simple jumbotron-style component fhis is a simple hero unit, a simple jumbotron-style component fhis is a sihis is a simple hero unit, a simple jumbotron-style component fmple hero unit, a simple jumbotron-style component fhis is a simple hero unit, a simple jumbotron-style chis is a simple hero unit, a simple jumbotron-style component fomponent for calling extra attention to featured content or information.</p>
